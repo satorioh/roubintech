@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="keywords" content="百度指数,微指数,淘宝指数,指数,电影指数,票房数据,医药数据,泄露数据,数据搜索,元数据">
+    <meta name="description" content="数据查询——为数据控,学术汪,以及大数据需求者提供方便的数据资源搜索入口">
+    <title>数据查询—大数据时代必备</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.offcanvas.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/green.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+     　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+       <button id="home" class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+         <span class="sr-only">Toggle Navigation</span>
+         <span class="glyphicon glyphicon-th-large"></span>
+        </button>
+       <button id="menu-right" type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-menu-right"></span>
+        </button>
+        <!-- <button id="menu-right" type="button" class="navbar-toggle offcanvas-toggle" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-menu-left"></span>
+        </button> -->
+       <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+       <a href="index.html" class="navbar-brand"><img id="logo" class="img-responsive" src="image/logo_white.PNG"></a>
+  </div>
+  <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+  <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav" id="nav">
+            <li><a href="bittorrent.html" target="_blank"><img src="image/btcili.ico">比特磁力</a></li>
+            <li><a href="scholar.html" target="_blank"><img src="image/xueshu.ico">学术搜索</a></li>
+            <li><a href="design.html" target="_blank"><img src="image/sheji.ico">设计素材</a></li>
+            <li><a href="data.html" target="_blank"><img src="image/shuju.ico">数据查询</a></li>
+            <li><a href="funny.html" target="_blank"><img src="image/haowan.ico">好玩趣站</a></li>
+        </ul>
+  </div>
+</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2 col-sm-4 col-xs-0" id="sidebar">
+					<nav class="navbar navbar-default navbar-offcanvas navbar-offcanvas-fade navbar-offcanvas-touch" role="navigation" id="js-bootstrap-offcanvas">
+            <button id="remove" type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="glyphicon glyphicon-remove"></i>
+              </button>
+            <ul>
+              <li><a href="http://b1bj.com/" target="showframe"><img src="image/b1bj.ico">比一比价</a></li>
+              <li><a href="http://www.iso315.org/" target="showframe"><img src="image/fangwei.jpg">防伪查询</a></li>
+              <li><a href="http://www.innojoy.com/search/index.shtml" target="showframe"><img src="image/zhuanli.ico">专利检索</a></li>
+              <li><a href="http://www.tianyancha.com/" target="showframe"><img src="image/qiyexinxi.ico">企业信息查询</a></li>
+              <li><a href="http://app2.sfda.gov.cn/datasearchp/gzcxSearch.do" target="showframe"><img src="image/shipingyaoping.ico">食品药品</a></li>
+              <li><a href="http://db.yaozh.com/" target="showframe"><img src="image/yaozhi.ico">药智数据</a></li>
+              <li><a href="http://chs.so/" target="showframe"><img src="image/haiguan.ico">海关</a></li>
+              <li><a href="http://www.qgtong.com/so/Search.asp" target="showframe"><img src="image/haiguanbaisou.ico">海关百搜</a></li>
+              <li><a href="http://tongji.baidu.com/data/district" target="showframe"><img src="image/baidutongji.ico">百度统计</a></li>
+              <li><a href="http://index.baidu.com/" target="showframe"><img src="image/baidu.ico">百度指数</a></li>
+              <li><a href="http://data.weibo.com/index" target="showframe"><img src="image/weibo.ico">微指数</a></li>
+              <li><a href="http://index.1688.com/" target="showframe"><img src="image/alizhishu.ico">阿里指数</a></li>
+              <li><a href="http://index.iqiyi.com/" target="showframe"><img src="image/aiqiyi.jpg">爱奇艺指数</a></li>
+              <li><a href="http://datamodel.bitauto.com/" target="showframe"><img src="image/qichezhishu.ico">汽车指数</a></li>
+              <li><a href="http://www.umindex.com/" target="showframe"><img src="image/youmeng.ico">友盟指数</a></li>
+              <li><a href="http://www.talkingdata.com/index/#/mobileIndex/zh_cn" target="showframe"><img src="image/yidongguanxiang.ico">移动观象台</a></li>
+              <li><a href="http://data.stats.gov.cn/" target="showframe"><img src="image/guojia.ico">国家数据</a></li>
+              <li><a href="http://www.cbooo.cn/" target="showframe"><img src="image/piaofang.ico">票房数据</a></li>
+              <li><a href="http://www.csres.com/" target="showframe"><img src="image/gb.ico">国家标准</a></li>
+              <li><a href="http://trends.baidu.com/ncee" target="showframe"><img src="image/baidu.ico">高考预测</a></li>
+              <li><a href="http://www.reg007.com/" target="showframe"><img src="image/zhuce.ico">注册过的网站</a></li>
+              <li><a href="http://heat.qq.com/qianxi.php" target="showframe"><img src="image/tengxunbigdata.ico">腾讯位置大数据</a></li>
+              <li><a href="http://report.amap.com/" target="showframe"><img src="image/chengshijiaotong.ico">城市交通</a></li>
+              <li><a href="http://map.norsecorp.com/" target="showframe"><img src="image/wangluogongji.ico">网络攻击监测</a></li>
+              <li><a href="http://vis.360.cn/open/fishsite/" target="showframe"><img src="image/wangluozhapian.ico">网络诈骗监测</a></li>
+              <li><a href="http://openlaw.cn/" target="showframe"><img src="image/caipan.png">裁判文书检索</a></li>
+              <li><a href="http://www.similarsitesearch.com/cn/" target="showframe"><img src="image/similarsite.ico">Similar Site</a></li>
+              <li><a href="http://data.worldbank.org.cn/" target="showframe"><img src="image/worldbank.ico">世界银行</a></li>
+            </ul>
+          </nav>
+				</div>
+
+				      <div id="wrap" class="col-md-16 col-sm-14 col-xs-18">
+                    <div id="main">
+                        <iframe id="showframe" name="showframe" frameborder="0" src="http://b1bj.com/"></iframe>
+                    </div>  
+                    <div id="footer">
+                      <div id="foot">
+                      <a href="http://roubintech.com/" target="_blank">肉饼科技出品</a>
+                       <span>&copy; 2015-2016 Roubintech</span>
+                       <a href="http://www.miibeian.gov.cn/" target="_blank">ICP备案编号：苏ICP备15006027号-1</a>
+                       <a href="mianze.html"  target="showframe">免责声明</a>
+                       </div>
+                    </div>          
+              </div>
+			</div>
+		</div>
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.offcanvas.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.navbar{
+	background-color: #4777B4;
+	}
+#nav li a{
+	color: #fff;
+}
+#nav li a:hover{
+	background-color: #628BBF;
+}
+#home{
+	background-color:#4777B4;
+}
+#remove{
+	background-color:#4777B4;
+	float: left;
+}
+#menu-right{
+	background-color:#4777B4;
+}
+#sidebar{
+	background-color: #4777B4;
+	}
+#sidebar ul li a{
+	color: #fff;
+}
+#sidebar ul li a:hover{
+	background-color: #628BBF;
+}
