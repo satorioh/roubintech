@@ -1,12 +1,14 @@
-html,body,#_frame-container {
+html,body{
     height: 100%;
-    /*width: 100%;*/
+    width: 100%;
     padding: 0;
 }
 body {
     padding-bottom: 50px;
+
 }
-#_showframe {
-    width: 100%;
-    height: 100%;
-}
+/*#_showframe {*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+
+/*}*/
