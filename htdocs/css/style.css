@@ -1,14 +1,36 @@
-html,body{
+html,body,#_frameContainer{
     height: 100%;
-    width: 100%;
+    padding: 0;
+}
+.container-fluid {
     padding: 0;
 }
 body {
-    padding-bottom: 50px;
+    padding-bottom: 37px;
+}
+#_showFrame {
+    height: 100%;
+    width: 100%;
+}
+#_navBar::before {
 
 }
-/*#_showframe {*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-
-/*}*/
+#_startButton {
+    outline: none;
+}
+/*navbar glass effect
+#_glassWrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#_glassWrap::before {
+    content: '';
+    position: absolute;
+    width:100%;
+    min-height:36px;
+    background: rgba(221,221,221,.5);
+    z-index: -1;
+    filter:blur(10px);
+    margin: 0 -10px;
+}*/

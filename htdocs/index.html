@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/iconfont.css">
         <link rel="stylesheet" href="css/style.css">
         <title>肉饼导航</title>
         <!--[if lt IE 9]>
@@ -14,30 +15,48 @@
     </head>
     <body>
     <!--main iframe-->
-        <div class="embed-responsive embed-responsive-16by9" id="_frame-container">
-            <iframe id="_showframe" name="showframe" class="embed-responsive-item" src="http://cn.bing.com/"></iframe>
+        <div class="container-fluid" id="_frameContainer">
+            <iframe id="_showFrame" name="showframe" frameborder="0" src="http://cn.bing.com/"></iframe>
         </div>
     <!--navbar bottom-->
-        <div class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container-fluid">
+        <div class="navbar navbar-default navbar-fixed-bottom" id="_navBar">
+            <div class="container-fluid" id="_glassWrap">
                 <div class="dropup navbar-left">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-                        Dropup
-                        <span class="caret"></span>
+                    <button class="btn dropdown-toggle" type="button" id="_startButton" data-toggle="dropdown">
+                        <span class="iconfont icon-windows"></span>
                     </button>
-                    <div class="dropdown-menu">
-                        <div class="container">
+                    <div class="dropdown-menu" id="_startMenu">
+                        <!--start menu-->
+                        <div class="container" id="_menuContainer">
                             <div class="row">
-                                <div class="col-xs-12 col-md-12 bg-success">cccccccccccccccccccccccccccccccc</div>
+                                <div class="hidden-xs hidden-sm col-md-4 bg-success">
+                                    <div class="panel-group">
+                                        <div class="panel panel-danger">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" href="#xyj" class="panel-title" id="test">西游记简介</a>
+                                            </div>
+                                            <div id="xyj" class="collapse in panel-collapse">
+                                                <div class="panel-body">
+                                                    <p>西游记详情 lorem*3</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-8 bg-danger">dddd</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <a class="navbar-link navbar-text navbar-right" href="http://www.miibeian.gov.cn/" target="_blank">ICP备案编号：苏ICP备15006027号-1</a>
+                <span class="navbar-link navbar-text navbar-right">&copy;2017 Roubintech</span>
+
             </div>
         </div>
     <!--js file:jquery、bootstrap、bootlint-->
         <script src="js/jquery-1.11.3.js"></script>
         <script src="js/bootstrap.js"></script>
+    <script src="js/1.js"></script>
     <!--TODO:delete bootline when finished-->
         <script>
             (function () {
