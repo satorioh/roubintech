@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://v3.bootcss.com/customize/?id=52daebc4a4ec827c981e5182442f4371)
- * Config saved to config.json and https://gist.github.com/52daebc4a4ec827c981e5182442f4371
+ * Generated using the Bootstrap Customizer (http://v3.bootcss.com/customize/?id=df8fb8a34193f5b1bc448976d393368a)
+ * Config saved to config.json and https://gist.github.com/df8fb8a34193f5b1bc448976d393368a
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -4171,7 +4171,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 36px;
+  min-height: 35px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4279,10 +4279,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 8px 15px;
+  padding: 7.5px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 36px;
+  height: 35px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4302,8 +4302,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -4327,7 +4327,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 4px -15px;
+  margin: 3.75px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4366,8 +4366,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
   }
 }
 .navbar-form {
@@ -4378,8 +4378,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4464,20 +4464,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 1px;
-  margin-bottom: 1px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 6.5px;
+  margin-bottom: 6.5px;
 }
 .navbar-text {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -4499,33 +4499,33 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #dddddd;
-  border-color: #cccccc;
+  background-color: #333333;
+  border-color: #222222;
 }
 .navbar-default .navbar-brand {
-  color: #777777;
+  color: #555555;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #3b3b3b;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777777;
+  color: #555555;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  color: #555555;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #9a9a9a;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #cccccc;
+  background-color: #222222;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4545,28 +4545,28 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #cccccc;
+  border-color: #222222;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #cccccc;
+  background-color: #222222;
   color: #555555;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    color: #555555;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
+    color: #9a9a9a;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555555;
-    background-color: #cccccc;
+    background-color: #222222;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4576,17 +4576,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #777777;
+  color: #555555;
 }
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: #9a9a9a;
 }
 .navbar-default .btn-link {
-  color: #777777;
+  color: #555555;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #333333;
+  color: #9a9a9a;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
