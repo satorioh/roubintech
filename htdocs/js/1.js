@@ -6,7 +6,10 @@ var popBox = {
     //boxBottom:0,
     //boxLeft:0,
     boxHeight:getComputedStyle($box[0]).height,
+    boxWidth:getComputedStyle($box[0]).width,
     init:function () {
+        console.log(this.boxHeight);
+        console.log(this.boxWidth);
         $box.css("marginBottom","-"+this.boxHeight);
     },
     down:function () {
@@ -17,12 +20,16 @@ var popBox = {
     }
 };
 popBox.init();
-$('#_startButton').click(function () {
+$('#_startButton').click(function (e) {
    if (parseInt($box.css("marginBottom")) < 0) {
        popBox.up();
    }else {
        popBox.down();
    }
+});
+$('html').mousedown(function (e) {
+   console.log(e.clientX);
+   console.log(e.clientY);
 });
 
 /*glyphicon-menu-down icon toggle*/
@@ -36,5 +43,8 @@ $box.on("click","a:not(.itemTitle)",function (e) {
     e.preventDefault();
     var $target = $(e.target);
     $showFrame.attr("src",$target.attr("data-href"));
-})
+});
+
+/*scrollbar fadein & fadeout*/
+$('::-webkit-scrollbar').css("backgroundColor","red");
 
