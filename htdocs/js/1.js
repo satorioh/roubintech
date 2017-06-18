@@ -27,7 +27,8 @@ $('#_startButton').click(function (e) {
        popBox.down();
    }
 });
-$('html').mousedown(function (e) {
+
+$('#_showFrame').on("click",function (e) {
    console.log(e.clientX);
    console.log(e.clientY);
 });
