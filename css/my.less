@@ -1,0 +1,115 @@
+@import "bootstrap.less";
+
+/******my style******/
+@glass-bg:rgba(51,51,51,.8);
+@glass-hover-bg:rgba(107,107,107,.7);
+
+html,body,#_frameContainer{
+  height: 100%;
+  padding: 0;
+}
+body {
+  padding-bottom: @navbar-height;
+}
+.icon {
+  width: 1.2em; height: 1.2em;
+  vertical-align: -0.3em;
+  fill: currentColor;
+  overflow: hidden;
+  margin-right: .5em;
+}
+.container-fluid {
+  padding: 0;
+}
+#_showFrame {
+  height: 100%;
+  width: 100%;
+}
+#_startButton {
+  outline: none;
+  border-radius: 0;
+  background: #333;
+  &:hover {
+  background: rgba(130,130,130,.5);
+  }
+}
+#_popBox {
+  height: 66%;
+  position: fixed;
+  left:0;
+  bottom: 0;
+  padding-top: 15px;
+  /*border:1px solid #fff;*/
+  background: @glass-bg;
+  opacity: 0;
+  > .row {
+    height: 100%;
+  }
+  a.itemTitle {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+  #_popBox-left {
+    height:100%;
+    overflow: scroll;
+    overflow-x:hidden;
+    &::-webkit-scrollbar{
+      /*left col scrollbar effedt*/
+      width: 10px;
+      background-color: inherit;
+      }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 5px;
+      background-color: rgba(107,107,107,.7);
+      visibility: hidden;
+
+    }
+    &:hover::-webkit-scrollbar-thumb{
+      visibility: visible;
+    }
+  }
+  a.list-group-item {
+    background: inherit;
+    &:focus {
+      background: inherit;/*cover bootstrap style*/
+    }
+  }
+  a {
+    color:#fff;
+    &:hover {
+      background: @glass-hover-bg;
+    }
+  }
+}
+/*_popBox width media query*/
+@media (max-width: 991px) {
+  #_popBox {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #_popBox {
+    width: 61.8%;
+  }
+}
+
+
+/*navbar glass effect
+#_glassWrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#_glassWrap::before {
+    content: '';
+    position: absolute;
+    width:100%;
+    min-height:36px;
+    background: rgba(221,221,221,.5);
+    z-index: -1;
+    filter:blur(10px);
+    margin: 0 -10px;
+}*/

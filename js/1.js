@@ -41,7 +41,7 @@ $itemTitle.on("click",function (e) {
 
 /*get data-href to showFrame*/
 $box.on("click","a:not(.itemTitle)",function (e) {
-    e.preventDefault();
+    //e.preventDefault();
     var $target = $(e.target);
     $showFrame.attr("src",$target.attr("data-href"));
 });
