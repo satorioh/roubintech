@@ -41,11 +41,14 @@ $itemTitle.on("click",function (e) {
 
 /*get data-href to showFrame*/
 $box.on("click","a:not(.itemTitle)",function (e) {
-    //e.preventDefault();
+    e.preventDefault();
     var $target = $(e.target);
-    $showFrame.attr("src",$target.attr("data-href"));
+    if ($target.attr("target")){
+        window.open($target.attr("data-href"));
+    }else {
+        $showFrame.attr("src",$target.attr("data-href"));
+    }
 });
 
-/*scrollbar fadein & fadeout*/
-$('::-webkit-scrollbar').css("backgroundColor","red");
+
 
