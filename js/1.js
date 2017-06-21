@@ -16,7 +16,7 @@ var popBox = {
         $box.animate({marginBottom:"-"+this.boxHeight,opacity:"0"},300,"swing");
     },
     up:function () {
-        $box.animate({marginBottom:"0",opacity:"1"},300,"swing");
+        $box.animate({marginBottom:"35px",opacity:"1"},300,"swing");
     }
 };
 popBox.init();

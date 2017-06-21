@@ -12,7 +12,7 @@ body {
   padding-bottom: @navbar-height;
 }
 .icon {
-  width: 1.2em; height: 1.2em;
+  width: 1.3em; height: 1.3em;
   vertical-align: -0.3em;
   fill: currentColor;
   overflow: hidden;
@@ -51,6 +51,9 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     font-weight: bold;
+    span:first-child {
+      vertical-align: -0.1em;
+    }
   }
   #_popBox-left {
     height:100%;
@@ -81,6 +84,17 @@ body {
     color:#fff;
     &:hover {
       background: @glass-hover-bg;
+    }
+  }
+  #_popBox-right {
+    #_popBox-right-recommend {
+      .carousel-caption {
+        span {
+          position: absolute;
+          bottom: 0;
+          font-size: .5em;
+        }
+      }
     }
   }
 }

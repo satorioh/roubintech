@@ -6387,12 +6387,11 @@ button.close {
   position: absolute;
   left: 15%;
   right: 15%;
-  bottom: 20px;
+  bottom: 0;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
-  text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .carousel-caption .btn {
@@ -6417,7 +6416,7 @@ button.close {
     margin-right: -10px;
   }
   .carousel-caption {
-    left: 20%;
+    left: 5%;
     right: 20%;
     padding-bottom: 30px;
   }
@@ -6732,8 +6731,8 @@ body {
   padding-bottom: 35px;
 }
 .icon {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.3em;
+  height: 1.3em;
   vertical-align: -0.3em;
   fill: currentColor;
   overflow: hidden;
@@ -6774,6 +6773,9 @@ body {
   padding: 10px 15px;
   font-weight: bold;
 }
+#_popBox a.itemTitle span:first-child {
+  vertical-align: -0.1em;
+}
 #_popBox #_popBox-left {
   height: 100%;
   overflow: scroll;
@@ -6804,6 +6806,11 @@ body {
 }
 #_popBox a:hover {
   background: rgba(107, 107, 107, 0.7);
+}
+#_popBox #_popBox-right #_popBox-right-recommend .carousel-caption span {
+  position: absolute;
+  bottom: 0;
+  font-size: .5em;
 }
 /*_popBox width media query*/
 @media (max-width: 991px) {
