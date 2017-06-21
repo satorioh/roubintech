@@ -6772,6 +6772,7 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   font-weight: bold;
+  letter-spacing: 10px;
 }
 #_popBox a.itemTitle span:first-child {
   vertical-align: -0.1em;
