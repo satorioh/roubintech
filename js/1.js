@@ -2,20 +2,24 @@
 var $box = $('#_popBox');
 var $showFrame = $('#_showFrame');
 var $itemTitle = $('.itemTitle');
+var jTitle = document.getElementsByClassName('itemTitle');
+//console.log(Array.isArray(jTitle));
+
 var popBox = {
-    //boxBottom:0,
-    //boxLeft:0,
-    boxHeight:getComputedStyle($box[0]).height,
-    boxWidth:getComputedStyle($box[0]).width,
-    init:function () {
+    boxHeight : getComputedStyle($box[0]).height,
+    boxWidth : getComputedStyle($box[0]).width,
+    init : function () {
         console.log(this.boxHeight);
         console.log(this.boxWidth);
         $box.css("marginBottom","-"+this.boxHeight);
     },
-    down:function () {
+    down : function () {
         $box.animate({marginBottom:"-"+this.boxHeight,opacity:"0"},300,"swing");
+        $itemTitle.next().removeClass('in');
+        glyphiconToggle.bind(jTitle);
+
     },
-    up:function () {
+    up : function () {
         $box.animate({marginBottom:"35px",opacity:"1"},300,"swing");
     }
 };
@@ -33,11 +37,22 @@ $('#_showFrame').on("click",function (e) {
    console.log(e.clientY);
 });
 
-/*glyphicon-menu-down icon toggle*/
-$itemTitle.on("click",function (e) {
+// var itemTitle = {
+//     $itemTitle : $('.itemTitle'),
+//
+// };
+function glyphiconToggle(e) {
     var $span = $(this).children("span:last");
-    $span.hasClass("glyphicon-menu-down") ? $span.removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up") : $span.removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
-});
+    if ($span.hasClass("glyphicon-menu-down")){
+        $span.removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
+        $(this).css("color","springgreen");
+    }else {
+        $span.removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
+        $(this).css("color","#fff");
+    }
+}
+/*glyphicon-menu-down icon toggle*/
+$itemTitle.on("click", glyphiconToggle);
 
 // add jump out icon for link that has target attr
 $box.find("a.list-group-item[target]").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
