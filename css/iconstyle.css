@@ -1,0 +1,630 @@
+.sprite {
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.sprite.sprite-IconArchive {
+  background-position: -2px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-ailiandongman {
+  background-position: -22px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-alizhishu {
+  background-position: -42px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-aminer {
+  background-position: -62px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-atugu {
+  background-position: -82px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-b1bj {
+  background-position: -102px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-baidu {
+  background-position: -122px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-baidutongji {
+  background-position: -142px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-bielefeld {
+  background-position: -162px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-biyingxueshu {
+  background-position: -182px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-br {
+  background-position: -202px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-btcili {
+  background-position: -2px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-btsoso {
+  background-position: -22px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-bttiantang {
+  background-position: -42px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-caipan {
+  background-position: -62px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-chakuaidi {
+  background-position: -82px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-chaoxing {
+  background-position: -102px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-chengshijiaotong {
+  background-position: -122px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-ciliyun {
+  background-position: -142px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-cinii {
+  background-position: -162px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-cnki {
+  background-position: -182px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-colorhunt {
+  background-position: -202px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-colorrrs {
+  background-position: -2px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-colovely {
+  background-position: -22px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-dazi {
+  background-position: -42px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-dianzi {
+  background-position: -62px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-dianzishu {
+  background-position: -82px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-diaosi {
+  background-position: -102px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-doaj {
+  background-position: -122px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-dongmanhuayuan {
+  background-position: -142px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-douban {
+  background-position: -162px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-doutu {
+  background-position: -182px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-dribbble {
+  background-position: -202px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-fangwei {
+  background-position: -2px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-findicon {
+  background-position: -22px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-freeimage {
+  background-position: -42px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-gb {
+  background-position: -62px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-google_scholar {
+  background-position: -82px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-guojia {
+  background-position: -102px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-guotu {
+  background-position: -122px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-haiguan {
+  background-position: -142px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-haiguanbaisou {
+  background-position: -162px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-handian {
+  background-position: -182px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-huagong {
+  background-position: -202px -62px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-huahewu {
+  background-position: -2px -82px;
+  width: 15px;
+  height: 16px;
+}
+.sprite.sprite-icon8 {
+  background-position: -21px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-iconfont {
+  background-position: -41px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-icongallery {
+  background-position: -61px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-iconpng {
+  background-position: -81px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-ieee {
+  background-position: -101px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-jairo {
+  background-position: -121px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-jianqiao {
+  background-position: -141px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-kaiyuanzhihai {
+  background-position: -161px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-lanying {
+  background-position: -181px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-liumeiti {
+  background-position: -201px -82px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-luoqie {
+  background-position: -2px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-mashengligong {
+  background-position: -22px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-meishi {
+  background-position: -42px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-miaosou {
+  background-position: -62px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-msdn {
+  background-position: -82px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-oalib {
+  background-position: -102px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-okbt {
+  background-position: -122px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-open {
+  background-position: -142px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-pangci {
+  background-position: -162px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-pdf {
+  background-position: -182px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-piaofang {
+  background-position: -202px -102px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-pku {
+  background-position: -2px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-px {
+  background-position: -22px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-qichezhishu {
+  background-position: -42px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-qiuziti {
+  background-position: -62px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-qiyexinxi {
+  background-position: -82px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-quanping {
+  background-position: -102px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-rargb {
+  background-position: -122px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-scihub {
+  background-position: -142px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-sgst {
+  background-position: -162px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shangtufaxian {
+  background-position: -182px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-sheji {
+  background-position: -202px -122px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shengdeng {
+  background-position: -2px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shijieshuzi {
+  background-position: -22px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shipingyaoping {
+  background-position: -42px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shuichan {
+  background-position: -62px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shuimu {
+  background-position: -82px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-shuju {
+  background-position: -102px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-similarsite {
+  background-position: -122px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-soufang {
+  background-position: -142px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-sougou {
+  background-position: -162px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-sousucai {
+  background-position: -182px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-souweixin {
+  background-position: -202px -142px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-taikong {
+  background-position: -2px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tanchishe {
+  background-position: -22px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tebaidu {
+  background-position: -42px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tengxunbigdata {
+  background-position: -62px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tiancai {
+  background-position: -82px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tiantian {
+  background-position: -102px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tineye {
+  background-position: -122px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-torrentkitty {
+  background-position: -142px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tubiao {
+  background-position: -162px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-tunshi {
+  background-position: -182px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-uicloud {
+  background-position: -202px -162px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-vector {
+  background-position: -2px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-veryicon {
+  background-position: -22px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-verypan {
+  background-position: -42px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-wanfang {
+  background-position: -62px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-wangluogongji {
+  background-position: -82px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-wangluozhapian {
+  background-position: -102px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-weisheshou {
+  background-position: -122px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-weixinduihua {
+  background-position: -142px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-worldbank {
+  background-position: -162px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-xianggangdaxue {
+  background-position: -182px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-xueshu {
+  background-position: -202px -182px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-yaozhi {
+  background-position: -2px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-yidongguanxiang {
+  background-position: -22px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-youdao {
+  background-position: -42px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-youji {
+  background-position: -62px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-youmeng {
+  background-position: -82px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhaogepu {
+  background-position: -102px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zheda {
+  background-position: -122px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhongguogaoqing {
+  background-position: -142px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhongguoxueshu {
+  background-position: -162px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhongkeyuan {
+  background-position: -182px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhuangbi {
+  background-position: -202px -202px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zhuce {
+  background-position: -222px -2px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zimu {
+  background-position: -222px -22px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zimuku {
+  background-position: -222px -42px;
+  width: 16px;
+  height: 16px;
+}
+.sprite.sprite-zimuzu {
+  background-position: -222px -62px;
+  width: 16px;
+  height: 16px;
+}
