@@ -39,6 +39,9 @@ $itemTitle.on("click",function (e) {
     $span.hasClass("glyphicon-menu-down") ? $span.removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up") : $span.removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
 });
 
+// add jump out icon for link that has target attr
+$box.find("a.list-group-item[target]").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
+
 /*get data-href to showFrame*/
 $box.on("click","a:not(.itemTitle)",function (e) {
     e.preventDefault();
@@ -49,6 +52,8 @@ $box.on("click","a:not(.itemTitle)",function (e) {
         $showFrame.attr("src",$target.attr("data-href"));
     }
 });
+
+
 
 
 
