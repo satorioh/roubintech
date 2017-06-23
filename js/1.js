@@ -1,6 +1,7 @@
 /*popbox up & down function*/
 var $box = $('#_popBox');
 var $showFrame = $('#_showFrame');
+var $iframeMask = $('#_iframeMask');
 //var $itemTitle = $('.itemTitle');
 //var jTitle = document.getElementsByClassName('itemTitle');
 //console.log(Array.isArray(jTitle));
@@ -33,8 +34,8 @@ var popBox = {
     boxHeight : getComputedStyle($box[0]).height,
     boxWidth : getComputedStyle($box[0]).width,
     init : function () {
-        console.log(this.boxHeight);
-        console.log(this.boxWidth);
+        //console.log(this.boxHeight);
+        //console.log(this.boxWidth);
         //console.log(itemTitle.$itemTitle);
         $box.css("marginBottom","-"+this.boxHeight);
     },
@@ -42,10 +43,10 @@ var popBox = {
         $box.animate({marginBottom:"-"+this.boxHeight,opacity:"0"},300,"swing");
         itemTitle.$itemTitle.next().removeClass('in');
         itemTitle.init.call(itemTitle.$itemTitle);
-
     },
     up : function () {
         $box.animate({marginBottom:"35px",opacity:"1"},300,"swing");
+        $iframeMask.css("display","block");
     }
 };
 popBox.init();
@@ -57,9 +58,11 @@ $('#_startButton').click(function (e) {
    }
 });
 
-$('#_showFrame').on("click",function (e) {
-   console.log(e.clientX);
-   console.log(e.clientY);
+$iframeMask.on("click",function (e) {
+   //console.log(e.clientX);
+   //console.log(e.clientY);
+    $(this).css("display","none");
+    popBox.down();
 });
 
 /*glyphicon-menu-down icon toggle*/
