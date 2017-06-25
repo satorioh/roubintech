@@ -76,6 +76,7 @@ $box.on("click","a:not(.itemTitle)",function (e) {
     e.preventDefault();
     var $target = $(e.target);
     if ($target.attr("target")){
+        //$target.attr("target","_parent");
         window.open($target.attr("data-href"));
     }else {
         $showFrame.attr("src",$target.attr("data-href"));
