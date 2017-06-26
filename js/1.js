@@ -1,7 +1,11 @@
 /*popbox up & down function*/
 var $box = $('#_popBox');
+var $boxLeft = $('#_popBox-left');
 var $showFrame = $('#_showFrame');
 var $iframeMask = $('#_iframeMask');
+var $carouselImg = $('.carousel-inner a');
+var imgArr = [];
+//var img = ["aiqiyi",];
 //var $itemTitle = $('.itemTitle');
 //var jTitle = document.getElementsByClassName('itemTitle');
 //console.log(Array.isArray(jTitle));
@@ -69,10 +73,9 @@ $iframeMask.on("click",function (e) {
 itemTitle.$itemTitle.on("click", itemTitle.glyphiconToggle);
 
 // add jump out icon for link that has target attr
-$box.find("a.list-group-item[target]").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
+$boxLeft.find("a.list-group-item[target]").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
 
-/*get data-href to showFrame*/
-$box.on("click","a:not(.itemTitle)",function (e) {
+function getDatahref(e) {
     e.preventDefault();
     var $target = $(e.target);
     if ($target.attr("target")){
@@ -81,7 +84,38 @@ $box.on("click","a:not(.itemTitle)",function (e) {
     }else {
         $showFrame.attr("src",$target.attr("data-href"));
     }
+};
+
+/*get data-href to showFrame*/
+$boxLeft.on("click","a:not(.itemTitle)", getDatahref
+    // e.preventDefault();
+    // var $target = $(e.target);
+    // if ($target.attr("target")){
+    //     //$target.attr("target","_parent");
+    //     window.open($target.attr("data-href"));
+    // }else {
+    //     $showFrame.attr("src",$target.attr("data-href"));
+    // }
+);
+
+var $dataImg = $boxLeft.find('a[data-img]');
+$dataImg.each(function () {
+    imgArr.push($(this).attr("data-img"));
 });
+console.log(imgArr);
+
+function noRepeat() {
+    var arr = [];
+    while (arr.length < 4){
+    var num = Math.floor(Math.random()*imgArr.length);
+    if (arr.indexOf(imgArr[num]) == -1) {
+        arr.push(imgArr[num]);
+        } else { continue;}
+    }
+    return arr;
+}
+console.log(noRepeat());
+
 
 
 
