@@ -102,19 +102,55 @@ var $dataImg = $boxLeft.find('a[data-img]');
 $dataImg.each(function () {
     imgArr.push($(this).attr("data-img"));
 });
-console.log(imgArr);
+//console.log(imgArr);
 
-function noRepeat() {
+/*generate random string*/
+function noRepeatObj() {
     var arr = [];
+    var obj = {};
     while (arr.length < 4){
     var num = Math.floor(Math.random()*imgArr.length);
     if (arr.indexOf(imgArr[num]) == -1) {
         arr.push(imgArr[num]);
         } else { continue;}
     }
-    return arr;
+    for(var i=0,len=arr.length;i<len;i++){
+        var $item = $boxLeft.find("[data-img="+arr[i]+"]");
+        var valueHref = ($item.attr("target"))?$item.attr("data-href")+"#"+arr[i]+"#target":$item.attr("data-href")+"#"+arr[i];
+        var keyText = $item.text().replace(/\s+/g,"");
+        obj[keyText] = valueHref;
+    }
+    return obj;
 }
-console.log(noRepeat());
+console.log(noRepeatObj());
+
+/*change carousel href & img src & text & target attr*/
+function carouselImgReady() {
+    var result = noRepeatObj();
+    var i = 0;
+    for(var key in result){
+        if(result.hasOwnProperty(key)){
+            //console.log($carouselImg[i]);
+            var arr = result[key].split("#");
+            $carouselImg[i].href = arr[0];
+            $($carouselImg[i]).find('img').attr("src","img/"+arr[1]+".png");
+            $($carouselImg[i]).find('span').text(key);
+            if(arr[2]){
+                $($carouselImg[i]).attr("target","_blank");
+            }
+            console.log($carouselImg[i]);
+            i++;
+        }
+    }
+    // $carouselImg.each(function () {
+    //
+    // });
+}
+carouselImgReady();
+
+
+
+
 
 
 
