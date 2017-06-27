@@ -77,26 +77,19 @@ $boxLeft.find("a.list-group-item[target]").append($('<span class="glyphicon glyp
 
 function getDatahref(e) {
     e.preventDefault();
-    var $target = $(e.target);
-    if ($target.attr("target")){
+    //var $target = $(e.target);
+    //console.log($target);
+    console.log($(this));
+    if ($(this).attr("target")){
         //$target.attr("target","_parent");
-        window.open($target.attr("data-href"));
+        window.open($(this).attr("data-href"));
     }else {
-        $showFrame.attr("src",$target.attr("data-href"));
+        $showFrame.attr("src",$(this).attr("data-href"));
     }
-};
+}
 
 /*get data-href to showFrame*/
-$boxLeft.on("click","a:not(.itemTitle)", getDatahref
-    // e.preventDefault();
-    // var $target = $(e.target);
-    // if ($target.attr("target")){
-    //     //$target.attr("target","_parent");
-    //     window.open($target.attr("data-href"));
-    // }else {
-    //     $showFrame.attr("src",$target.attr("data-href"));
-    // }
-);
+$boxLeft.on("click","a:not(.itemTitle)", getDatahref);
 
 var $dataImg = $boxLeft.find('a[data-img]');
 $dataImg.each(function () {
@@ -133,6 +126,7 @@ function carouselImgReady() {
             //console.log($carouselImg[i]);
             var arr = result[key].split("#");
             $carouselImg[i].href = arr[0];
+            $($carouselImg[i]).attr("data-href",arr[0]);
             $($carouselImg[i]).find('img').attr("src","img/"+arr[1]+".png");
             $($carouselImg[i]).find('span').text(key);
             if(arr[2]){
@@ -142,11 +136,9 @@ function carouselImgReady() {
             i++;
         }
     }
-    // $carouselImg.each(function () {
-    //
-    // });
 }
 carouselImgReady();
+$carouselImg.on("click", getDatahref);
 
 
 

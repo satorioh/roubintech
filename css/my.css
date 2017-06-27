@@ -7451,7 +7451,7 @@ body {
   background: inherit;
   color: #fff;
 }
-#_popBox #_popBox-right #_popBox-right-recommend .carousel-caption span {
+#_popBox #_popBox-right #_popBox-right-recommend .carousel-inner a .carousel-caption span {
   position: absolute;
   bottom: 0;
   font-size: .5em;
