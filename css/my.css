@@ -7355,6 +7355,11 @@ button.close {
   height: 16px;
 }
 /******my style******/
+.img-span {
+  position: absolute;
+  bottom: 5px;
+  font-size: .8em;
+}
 html,
 body,
 #_frameContainer {
@@ -7399,7 +7404,6 @@ body {
   left: 0;
   bottom: 0;
   padding-top: 15px;
-  /*border:1px solid #fff;*/
   background: rgba(51, 51, 51, 0.8);
   opacity: 0;
 }
@@ -7423,7 +7427,7 @@ body {
   overflow-x: hidden;
 }
 #_popBox #_popBox-left::-webkit-scrollbar {
-  /*left col scrollbar effedt*/
+  /*left col scrollbar effect*/
   width: 10px;
   background-color: inherit;
 }
@@ -7462,16 +7466,20 @@ body {
   border: 2px solid transparent;
 }
 #_popBox #_popBox-right #_popBox-right-recommend .carousel {
-  top: .5em;
+  top: 0.5em;
 }
 #_popBox #_popBox-right #_popBox-right-recommend .carousel-inner a .carousel-caption span {
   position: absolute;
-  bottom: 0;
-  font-size: .5em;
+  bottom: 5px;
+  font-size: .8em;
+}
+#_popBox #_popBox-right .common_site i {
+  visibility: hidden;
 }
 #_popBox #_popBox-right .common_site a {
   position: relative;
-  top: .5em;
+  display: inline-block;
+  top: 0.5em;
 }
 #_popBox #_popBox-right .common_site a img {
   border: 2px solid transparent;
@@ -7481,12 +7489,12 @@ body {
 }
 #_popBox #_popBox-right .common_site a span {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-left: 5px;
+  bottom: 5px;
+  font-size: .8em;
+  margin-left: 8px;
   margin-bottom: 1px;
   width: 2.5em;
-  font-size: .5em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /*_popBox width media query*/
 @media (max-width: 991px) {

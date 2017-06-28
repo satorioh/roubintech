@@ -2,8 +2,14 @@
 @import "iconstyle.less";
 
 /******my style******/
-@glass-bg:rgba(51,51,51,.8);
-@glass-hover-bg:rgba(107,107,107,.7);
+@glass-bg: rgba(51,51,51,.8);
+@glass-hover-bg: rgba(107,107,107,.7);
+.img-span {
+  position: absolute;
+  bottom: 5px;
+  font-size: .8em;
+}
+@img-top: .5em;
 
 html,body,#_frameContainer{
   height: 100%;
@@ -46,7 +52,6 @@ body {
   left:0;
   bottom: 0;
   padding-top: 15px;
-  /*border:1px solid #fff;*/
   background: @glass-bg;
   opacity: 0;
   > .row {
@@ -58,9 +63,6 @@ body {
     text-decoration: none;
     padding: 10px 15px;
     font-size: 1.1em;
-    //border:1px solid yello;
-    //color: springgreen;
-    //font-weight: 700;
     letter-spacing: 10px;
     span:first-child {
       vertical-align: -0.1em;
@@ -69,17 +71,16 @@ body {
   #_popBox-left {
     height:100%;
     overflow: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
     &::-webkit-scrollbar{
-      /*left col scrollbar effedt*/
+      /*left col scrollbar effect*/
       width: 10px;
       background-color: inherit;
       }
     &::-webkit-scrollbar-thumb{
       border-radius: 5px;
-      background-color: rgba(107,107,107,.7);
+      background-color: @glass-hover-bg;
       visibility: hidden;
-
     }
     &:hover::-webkit-scrollbar-thumb{
       visibility: visible;
@@ -115,16 +116,13 @@ body {
     }
     #_popBox-right-recommend {
       .carousel {
-        top:.5em;
+        top: @img-top;
       }
       .carousel-inner {
         a {
-
           .carousel-caption {
             span {
-              position: absolute;
-              bottom: 0;
-              font-size: .5em;
+              .img-span;
             }
           }
         }
@@ -132,9 +130,13 @@ body {
       }
 
     }
+    .common_site i {
+      visibility: hidden;
+    }
     .common_site a {
       position: relative;
-      top:.5em;
+      display: inline-block;
+      top: @img-top;
       img {
         border: 2px solid transparent;
         &:hover {
@@ -142,13 +144,12 @@ body {
         }
       }
       span {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        margin-left: 5px;
+        .img-span;
+        //left: 0;
+        margin-left: 8px;
         margin-bottom: 1px;
         width: 2.5em;
-        font-size: .5em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
       }
     }
   }
