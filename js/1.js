@@ -139,6 +139,7 @@ function carouselImgReady() {
 }
 carouselImgReady();
 $carouselImg.on("click", getDatahref);
+$('.common_site > a').on("click", getDatahref);
 
 
 

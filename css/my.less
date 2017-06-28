@@ -107,7 +107,16 @@ body {
   #_popBox-right {
     background: inherit;
     color: #fff;
+    .row {
+      margin-top:.7em;
+    }
+    img {
+      border: 2px solid transparent;
+    }
     #_popBox-right-recommend {
+      .carousel {
+        top:.5em;
+      }
       .carousel-inner {
         a {
 
@@ -123,6 +132,25 @@ body {
       }
 
     }
+    .common_site a {
+      position: relative;
+      top:.5em;
+      img {
+        border: 2px solid transparent;
+        &:hover {
+          border-color: #90B2DB;
+        }
+      }
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 5px;
+        margin-bottom: 1px;
+        width: 2.5em;
+        font-size: .5em;
+      }
+    }
   }
 }
 /*_popBox width media query*/
@@ -136,7 +164,9 @@ body {
     width: 61.8%;
   }
 }
-
+#_navBar {
+  font-size: .8em;
+}
 
 /*navbar glass effect
 #_glassWrap {
