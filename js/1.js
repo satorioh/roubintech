@@ -138,6 +138,18 @@ carouselImgReady();
 $carouselImg.on("click", getDatahref);
 $('.common_site > a').on("click", getDatahref);
 
+//customer scrollbar import
+(function($){
+    $(window).on("load",function(){
+        $("#_popBox-left").mCustomScrollbar({
+            theme: "light-3",
+            scrollInertia: 300,
+            mouseWheelPixels: 120,
+            autoHideScrollbar: true
+        });
+    });
+})(jQuery);
+
 
 
 
