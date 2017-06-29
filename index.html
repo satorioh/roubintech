@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
         <link rel="stylesheet" href="css/my.css">
         <link rel="shortcut icon" href="favicon.ico">
         <meta name="keywords" content="肉饼导航,搜索,下载,资源聚合,网址导航">
@@ -600,8 +601,15 @@
         <script src="js/jquery-1.11.3.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/iconfont.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/1.js"></script>
-
+        <script>
+            (function($){
+                $(window).on("load",function(){
+                    $("#_popBox-left").mCustomScrollbar();
+                });
+            })(jQuery);
+        </script>
     <!--TODO:delete bootline when finished-->
         <script>
             (function () {
