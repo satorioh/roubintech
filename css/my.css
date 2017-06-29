@@ -7359,7 +7359,7 @@ button.close {
   position: absolute;
   display: block;
   bottom: 5px;
-  font-size: .5em;
+  font-size: .7em;
 }
 html,
 body,
@@ -7424,21 +7424,8 @@ body {
 }
 #_popBox #_popBox-left {
   height: 100%;
-  overflow: scroll;
+  overflow: hidden;
   overflow-x: hidden;
-}
-#_popBox #_popBox-left::-webkit-scrollbar {
-  /*left col scrollbar effect*/
-  width: 10px;
-  background-color: inherit;
-}
-#_popBox #_popBox-left::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(107, 107, 107, 0.7);
-  visibility: hidden;
-}
-#_popBox #_popBox-left:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
 }
 #_popBox a.list-group-item {
   background: inherit;
@@ -7474,7 +7461,7 @@ body {
   position: absolute;
   display: block;
   bottom: 5px;
-  font-size: .5em;
+  font-size: .7em;
   margin-left: 5px;
   margin-bottom: 1px;
 }
@@ -7497,7 +7484,7 @@ body {
   position: absolute;
   display: block;
   bottom: 5px;
-  font-size: .5em;
+  font-size: .7em;
   margin-left: 8px;
   margin-bottom: 1px;
   width: 2.5em;

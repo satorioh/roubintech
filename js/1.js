@@ -5,10 +5,7 @@ var $showFrame = $('#_showFrame');
 var $iframeMask = $('#_iframeMask');
 var $carouselImg = $('.carousel-inner a');
 var imgArr = [];
-//var img = ["aiqiyi",];
-//var $itemTitle = $('.itemTitle');
-//var jTitle = document.getElementsByClassName('itemTitle');
-//console.log(Array.isArray(jTitle));
+
 var itemTitle = {
     $itemTitle : $('.itemTitle'),
     glyphiconToggle : function () {
