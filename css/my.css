@@ -7357,8 +7357,9 @@ button.close {
 /******my style******/
 .img-span {
   position: absolute;
+  display: block;
   bottom: 5px;
-  font-size: .8em;
+  font-size: .5em;
 }
 html,
 body,
@@ -7464,21 +7465,26 @@ body {
 }
 #_popBox #_popBox-right img {
   border: 2px solid transparent;
+  display: inline-block;
 }
 #_popBox #_popBox-right #_popBox-right-recommend .carousel {
   top: 0.5em;
 }
 #_popBox #_popBox-right #_popBox-right-recommend .carousel-inner a .carousel-caption span {
   position: absolute;
+  display: block;
   bottom: 5px;
-  font-size: .8em;
+  font-size: .5em;
+  margin-left: 5px;
+  margin-bottom: 1px;
 }
 #_popBox #_popBox-right .common_site i {
   visibility: hidden;
+  display: block;
 }
 #_popBox #_popBox-right .common_site a {
   position: relative;
-  display: inline-block;
+  display: block;
   top: 0.5em;
 }
 #_popBox #_popBox-right .common_site a img {
@@ -7489,8 +7495,9 @@ body {
 }
 #_popBox #_popBox-right .common_site a span {
   position: absolute;
+  display: block;
   bottom: 5px;
-  font-size: .8em;
+  font-size: .5em;
   margin-left: 8px;
   margin-bottom: 1px;
   width: 2.5em;

@@ -6,8 +6,9 @@
 @glass-hover-bg: rgba(107,107,107,.7);
 .img-span {
   position: absolute;
+  display: block;
   bottom: 5px;
-  font-size: .8em;
+  font-size: .5em;
 }
 @img-top: .5em;
 
@@ -113,6 +114,7 @@ body {
     }
     img {
       border: 2px solid transparent;
+      display: inline-block;
     }
     #_popBox-right-recommend {
       .carousel {
@@ -123,6 +125,8 @@ body {
           .carousel-caption {
             span {
               .img-span;
+              margin-left: 5px;
+              margin-bottom: 1px;
             }
           }
         }
@@ -132,10 +136,11 @@ body {
     }
     .common_site i {
       visibility: hidden;
+      display: block;
     }
     .common_site a {
       position: relative;
-      display: inline-block;
+      display: block;
       top: @img-top;
       img {
         border: 2px solid transparent;
