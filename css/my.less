@@ -2,8 +2,15 @@
 @import "iconstyle.less";
 
 /******my style******/
-@glass-bg:rgba(51,51,51,.8);
-@glass-hover-bg:rgba(107,107,107,.7);
+@glass-bg: rgba(51,51,51,.8);
+@glass-hover-bg: rgba(107,107,107,.7);
+.img-span {
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  font-size: .7em;
+}
+@img-top: .5em;
 
 html,body,#_frameContainer{
   height: 100%;
@@ -26,6 +33,12 @@ body {
   height: 100%;
   width: 100%;
 }
+#_iframeMask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(250,0,0,0);
+}
 #_startButton {
   outline: none;
   border-radius: 0;
@@ -40,7 +53,6 @@ body {
   left:0;
   bottom: 0;
   padding-top: 15px;
-  /*border:1px solid #fff;*/
   background: @glass-bg;
   opacity: 0;
   > .row {
@@ -51,7 +63,7 @@ body {
     width: 100%;
     text-decoration: none;
     padding: 10px 15px;
-    font-weight: 700;
+    font-size: 1.1em;
     letter-spacing: 10px;
     span:first-child {
       vertical-align: -0.1em;
@@ -59,33 +71,33 @@ body {
   }
   #_popBox-left {
     height:100%;
-    overflow: scroll;
-    overflow-x:hidden;
-    &::-webkit-scrollbar{
-      /*left col scrollbar effedt*/
-      width: 10px;
-      background-color: inherit;
-      }
-    &::-webkit-scrollbar-thumb{
-      border-radius: 5px;
-      background-color: rgba(107,107,107,.7);
-      visibility: hidden;
-
-    }
-    &:hover::-webkit-scrollbar-thumb{
-      visibility: visible;
-    }
+    overflow: hidden;
+    overflow-x: hidden;
+    //&::-webkit-scrollbar{
+    //  /*left col scrollbar effect*/
+    //  width: 10px;
+    //  background-color: inherit;
+    //  }
+    //&::-webkit-scrollbar-thumb{
+    //  border-radius: 5px;
+    //  background-color: @glass-hover-bg;
+    //  visibility: hidden;
+    //}
+    //&:hover::-webkit-scrollbar-thumb{
+    //  visibility: visible;
+    //}
   }
   a.list-group-item {
     background: inherit;
-    &:focus {
-      background: inherit;/*cover bootstrap style*/
-    }
+    letter-spacing: 5px;
+    //&:focus {
+    //  background: inherit;/*cover bootstrap style*/
+    //}
     i.sprite {
       display: inline-block;
       vertical-align: middle;
       overflow: hidden;
-      margin-right: .5em;
+      margin-right: .8em;
     }
   }
   a {
@@ -95,13 +107,54 @@ body {
     }
   }
   #_popBox-right {
+    background: inherit;
+    color: #fff;
+    .row {
+      margin-top:.7em;
+    }
+    img {
+      border: 2px solid transparent;
+      display: inline-block;
+    }
     #_popBox-right-recommend {
-      .carousel-caption {
-        span {
-          position: absolute;
-          bottom: 0;
-          font-size: .5em;
+      .carousel {
+        top: @img-top;
+      }
+      .carousel-inner {
+        a {
+          .carousel-caption {
+            span {
+              .img-span;
+              margin-left: 5px;
+              margin-bottom: 1px;
+            }
+          }
         }
+
+      }
+
+    }
+    .common_site i {
+      visibility: hidden;
+      display: block;
+    }
+    .common_site a {
+      position: relative;
+      display: block;
+      top: @img-top;
+      img {
+        border: 2px solid transparent;
+        &:hover {
+          border-color: #90B2DB;
+        }
+      }
+      span {
+        .img-span;
+        //left: 0;
+        margin-left: 8px;
+        margin-bottom: 1px;
+        width: 2.5em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
       }
     }
   }
@@ -117,7 +170,9 @@ body {
     width: 61.8%;
   }
 }
-
+#_navBar {
+  font-size: .8em;
+}
 
 /*navbar glass effect
 #_glassWrap {
