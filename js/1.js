@@ -1,4 +1,3 @@
-/*popbox up & down function*/
 var $box = $('#_popBox');
 var $boxLeft = $('#_popBox-left');
 var $showFrame = $('#_showFrame');
@@ -23,21 +22,16 @@ var itemTitle = {
     },
     init : function () {
         var $span = $(this).children("span:nth-of-type(2)");
-        //console.log($span);
         if ($span.hasClass("glyphicon-menu-up")){
             $span.removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
             $(this).children('span.glyphicon-menu-down').parent().css("color","#fff");
         }
     }
-
 };
 var popBox = {
     boxHeight : getComputedStyle($box[0]).height,
     boxWidth : getComputedStyle($box[0]).width,
     init : function () {
-        //console.log(this.boxHeight);
-        //console.log(this.boxWidth);
-        //console.log(itemTitle.$itemTitle);
         $box.css("marginBottom","-"+this.boxHeight);
     },
     down : function () {
@@ -50,7 +44,9 @@ var popBox = {
         $iframeMask.css("display","block");
     }
 };
+
 popBox.init();
+
 $('#_startButton').click(function (e) {
    if (parseInt($box.css("marginBottom")) < 0) {
        popBox.up();
@@ -92,7 +88,6 @@ var $dataImg = $boxLeft.find('a[data-img]');
 $dataImg.each(function () {
     imgArr.push($(this).attr("data-img"));
 });
-//console.log(imgArr);
 
 /*generate random string*/
 function noRepeatObj() {
@@ -112,7 +107,7 @@ function noRepeatObj() {
     }
     return obj;
 }
-console.log(noRepeatObj());
+//console.log(noRepeatObj());
 
 /*change carousel href & img src & text & target attr*/
 function carouselImgReady() {
@@ -135,6 +130,7 @@ function carouselImgReady() {
     }
 }
 carouselImgReady();
+
 $carouselImg.on("click", getDatahref);
 $('.common_site > a').on("click", getDatahref);
 
