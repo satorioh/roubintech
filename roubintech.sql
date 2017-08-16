@@ -67,5 +67,7 @@ insert into website values
 (null,'_comic','http://share.dmhy.org/','sprite sprite-dmhy','动漫花园','','data-img="dmhy"'),
 (null,'_comic','http://www.kisssub.org/','sprite sprite-ailiandongman','爱恋动漫','',''),
 (null,'_comic','https://nyaso.com/','sprite sprite-miaosou','喵搜','','data-img="miaosou"'),
+(null, "_download", "https://www.panc.cc/", "sprite sprite-pangci", "胖次", "", "data-img='pangci'"),
+(null, "_download", "https://rarbg.is/torrents.php", "sprite sprite-rarbg", "RARBG", "_blank", "data-img='rarbg'");
 
 select * from website;
