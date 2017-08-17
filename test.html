@@ -5,25 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<div id="_download" class="list-group collapse">
-    <a class="list-group-item" href="#" data-href="https://www.panc.cc/" data-img="pangci">
-        <i class="sprite sprite-pangci"></i>
-        胖次
-    </a>
-    <a class="list-group-item" href="#" data-href="https://rarbg.is/torrents.php" data-img="rarbg" target="_blank">
-        <i class="sprite sprite-rarbg"></i>
-        RARBG
-    </a>
-    <a class="list-group-item" href="#" data-href="https://www.torrentkitty.tv/search/" target="_blank">
-        <i class="sprite sprite-torrentkitty"></i>
-        TorrentKitty
-    </a>
-    <a class="list-group-item" href="#" data-href="https://www.jiumodiary.com/" data-img="jiumodiary">
-        <i class="sprite sprite-jiumodiary"></i>
-        电子书
-    </a>
+<div id="_funny" class="list-group collapse">
+    <a  class="list-group-item"  href="#" data-href="http://gzaas.com/"><i class="sprite sprite-quanping"></i>全屏消息</a>
+    <a  class="list-group-item"  href="#" data-href="http://cn.akinator.com/"><i class="sprite sprite-shengdeng"></i>神灯猜人</a>
+    <a  class="list-group-item"  href="#" data-href="http://deepba.com/"><i class="sprite sprite-zhuangbi"></i>装逼神器</a>
+    <a  class="list-group-item"  href="#" data-href="http://warin.space/"><i class="sprite sprite-taikong"></i>太空激战</a>
+    <a class="list-group-item" href="#" data-href="http://jokebird.com/" target="_blank"><i class="sprite sprite-tunshi"></i>笑笑鸟</a>
+    <a  class="list-group-item"  href="#" data-href="http://slither.io/"><i class="sprite sprite-tanchishe"></i>贪吃蛇</a>
+    <a  class="list-group-item"  href="#" data-href="http://dazi.kukuw.com/"><i class="sprite sprite-dazi"></i>在线打字</a>
 </div>
-
 <script src="js/jquery-1.11.3.js"></script>
 <script>
     var aTag = $('a');
@@ -42,7 +32,7 @@
         arr[i][2]=a.data('href');
         arr[i][4]=a.text().replace(/^\s+|\s+$/g,"");
         arr[i][5]=a.attr('target')?a.attr('target'):'';
-        arr[i][6]=`data-img='${a.data('img')}'`;
+        arr[i][6]=a.data('img')?`data-img='${a.data('img')}'`:'';
     };
     for(var i=0;i<iTag.length;i++){
         var icon = $(iTag[i]);
