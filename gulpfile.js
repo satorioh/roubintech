@@ -15,7 +15,7 @@ gulp.task('jscompress', function() {
     // 2. 压缩文件
         .pipe(uglify())
         // 3. 另存压缩后的文件
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('js'));
 });
 // 压缩 css 文件
 // 在命令行使用 gulp csscompress 启动此任务
@@ -26,7 +26,7 @@ gulp.task('csscompress', function() {
     // 2. 压缩文件
         .pipe(cleanCSS())
         // 3. 另存压缩后的文件
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('css'));
 });
 
 // 在命令行使用 gulp auto 启动此任务

@@ -11,13 +11,15 @@ var itemTitle = {
         //console.log(this);
         //var $target = $(e.target);
         var $span = $(this).children("span:nth-of-type(2)");
-        //console.log($span);
+        var wgroup = $(this).next().attr("id");
         if ($span.hasClass("glyphicon-menu-up")){
             $span.removeClass("glyphicon-menu-up").addClass("glyphicon-menu-down");
             $(this).children('span.glyphicon-menu-down').parent().css("color","#fff");
         }else {
             $span.removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
             $(this).children('span.glyphicon-menu-up').parent().css("color","springgreen");
+            loadListItem(wgroup);
+            //addTargetIcon();
         }
     },
     init : function () {
@@ -66,15 +68,14 @@ $iframeMask.on("click",function (e) {
 itemTitle.$itemTitle.on("click", itemTitle.glyphiconToggle);
 
 // add jump out icon for link that has target attr
-$boxLeft.find("a.list-group-item[target]").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
+function addTargetIcon(wgroup) {
+    $('#'+wgroup).find("a.list-group-item[target='_blank']").append($('<span class="glyphicon glyphicon-share-alt pull-right"></span>'));
+}
 
+//判断是在当前页，或新便签页打开链接
 function getDatahref(e) {
     e.preventDefault();
-    //var $target = $(e.target);
-    //console.log($target);
-    console.log($(this));
-    if ($(this).attr("target")){
-        //$target.attr("target","_parent");
+    if ($(this).attr("target")=="_blank"){
         window.open($(this).attr("data-href"));
     }else {
         $showFrame.attr("src",$(this).attr("data-href"));
@@ -88,51 +89,84 @@ var $dataImg = $boxLeft.find('a[data-img]');
 $dataImg.each(function () {
     imgArr.push($(this).attr("data-img"));
 });
+console.log(imgArr);
 
 /*generate random string*/
-function noRepeatObj() {
-    var arr = [];
-    var obj = {};
-    while (arr.length < 4){
-    var num = Math.floor(Math.random()*imgArr.length);
-    if (arr.indexOf(imgArr[num]) == -1) {
-        arr.push(imgArr[num]);
-        } else { continue;}
-    }
-    for(var i=0,len=arr.length;i<len;i++){
-        var $item = $boxLeft.find("[data-img="+arr[i]+"]");
-        var valueHref = ($item.attr("target"))?$item.attr("data-href")+"#"+arr[i]+"#target":$item.attr("data-href")+"#"+arr[i];
-        var keyText = $item.text().replace(/\s+/g,"");
-        obj[keyText] = valueHref;
-    }
-    return obj;
-}
-//console.log(noRepeatObj());
+// function noRepeatObj() {
+//     var arr = [];
+//     var obj = {};
+//     while (arr.length < 4){
+//     var num = Math.floor(Math.random()*imgArr.length);
+//     if (arr.indexOf(imgArr[num]) == -1) {
+//         arr.push(imgArr[num]);
+//         } else { continue;}
+//     }
+//     for(var i=0,len=arr.length;i<len;i++){
+//         var $item = $boxLeft.find("[data-img="+arr[i]+"]");
+//         var valueHref = ($item.attr("target"))?$item.attr("data-href")+"#"+arr[i]+"#target":$item.attr("data-href")+"#"+arr[i];
+//         var keyText = $item.text().replace(/\s+/g,"");
+//         obj[keyText] = valueHref;
+//     }
+//     return obj;
+// }
 
 /*change carousel href & img src & text & target attr*/
-function carouselImgReady() {
-    var result = noRepeatObj();
-    var i = 0;
-    for(var key in result){
-        if(result.hasOwnProperty(key)){
-            //console.log($carouselImg[i]);
-            var arr = result[key].split("#");
-            $carouselImg[i].href = arr[0];
-            $($carouselImg[i]).attr("data-href",arr[0]);
-            $($carouselImg[i]).find('img').attr("src","img/"+arr[1]+".png");
-            $($carouselImg[i]).find('span').text(key);
-            if(arr[2]){
-                $($carouselImg[i]).attr("target","_blank");
-            }
-            console.log($carouselImg[i]);
-            i++;
-        }
-    }
-}
-carouselImgReady();
+// function carouselImgReady() {
+//     var result = noRepeatObj();
+//     var i = 0;
+//     for(var key in result){
+//         if(result.hasOwnProperty(key)){
+//             //console.log($carouselImg[i]);
+//             var arr = result[key].split("#");
+//             $carouselImg[i].href = arr[0];
+//             $($carouselImg[i]).attr("data-href",arr[0]);
+//             $($carouselImg[i]).find('img').attr("src","img/"+arr[1]+".png");
+//             $($carouselImg[i]).find('span').text(key);
+//             if(arr[2]){
+//                 $($carouselImg[i]).attr("target","_blank");
+//             }
+//             //console.log($carouselImg[i]);
+//             i++;
+//         }
+//     }
+// }
+// carouselImgReady();
 
 $carouselImg.on("click", getDatahref);
 $('.common_site > a').on("click", getDatahref);
+
+//点击下拉按钮，异步加载list-item
+function loadListItem(wgroup) {
+    $.ajax({
+        url:'backend/list_group_item.php',
+        data:{wgroup:wgroup},
+        success:function (data,msg) {
+            console.log(msg);
+            console.log(data);
+            var html='';
+            $.each(data,function (i,group) {
+                html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+                if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
+                    html+=`<i class="${group.icon}"></i>
+                        ${group.wname}
+                    </a>`;
+                }else{
+                    html+=`<svg class="icon" aria-hidden="true">
+                            <use xlink:href="${group.icon}"></use>
+                        </svg>
+                        ${group.wname}
+                        </a>`;
+                }
+            });
+
+            $('#'+wgroup).html(html);
+            addTargetIcon(wgroup);
+        },
+        error:function (data,msg) {
+            console.log(msg);
+        }
+    });
+}
 
 //customer scrollbar import
 (function($){
@@ -145,6 +179,7 @@ $('.common_site > a').on("click", getDatahref);
         });
     });
 })(jQuery);
+
 
 
 

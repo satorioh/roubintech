@@ -38,7 +38,7 @@ insert into website values
 (null,'_video','http://www.iqiyi.com/','#icon-aiqiyi','爱奇艺','','data-img="iqiyi"'),
 (null,'_video','https://v.qq.com/','#icon-CN_tencentvideo','腾讯视频','',''),
 (null,'_video','https://www.bilibili.com/','#icon-bilibili','bilibili','','data-img="bilibili"'),
-(null,'_movie','https://movie.douban.com/','#icon-douban','豆瓣电影','_blank','data-img="doubanmovie"'),
+(null,'_movie','https://movie.douban.com/','sprite sprite-douban','豆瓣电影','_blank','data-img="doubanmovie"'),
 (null,'_movie','http://www.bttiantangs.com/','sprite sprite-bttiantang','BT天堂','',''),
 (null,'_movie','http://gaoqing.la/','sprite sprite-zhongguogaoqing','中国高清网','_blank',''),
 (null,'_movie','http://subhd.com/','sprite sprite-subhd','Sub HD','','data-img="subhd"'),
