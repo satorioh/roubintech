@@ -85,11 +85,11 @@ function getDatahref(e) {
 /*get data-href to showFrame*/
 $boxLeft.on("click","a:not(.itemTitle)", getDatahref);
 
-var $dataImg = $boxLeft.find('a[data-img]');
-$dataImg.each(function () {
-    imgArr.push($(this).attr("data-img"));
-});
-console.log(imgArr);
+// var $dataImg = $boxLeft.find('a[data-img]');
+// $dataImg.each(function () {
+//     imgArr.push($(this).attr("data-img"));
+// });
+// console.log(imgArr);
 
 /*generate random string*/
 // function noRepeatObj() {
@@ -141,8 +141,8 @@ function loadListItem(wgroup) {
         url:'backend/list_group_item.php',
         data:{wgroup:wgroup},
         success:function (data,msg) {
-            console.log(msg);
-            console.log(data);
+            // console.log(msg);
+            // console.log(data);
             var html='';
             $.each(data,function (i,group) {
                 html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
@@ -167,6 +167,36 @@ function loadListItem(wgroup) {
         }
     });
 }
+//右侧幻灯图异步生成
+$(function () {
+   $.ajax({
+       url:'backend/slide_data_img.php',
+       success:function (data,msg) {
+           console.log(msg);
+           console.log(data);
+           var html='';
+           $.each(data,function (i,carouselImg) {
+               html+=`
+               <div class="item">
+                                    <a href="#" data-href="${carouselImg.datahref}" target="${carouselImg.isjump}">
+                                        <img class="img-responsive" src="${carouselImg.img}">
+                                        <div class="carousel-caption">
+                                            <span>${carouselImg.wname}</span>
+                                        </div>
+                                    </a>
+                                </div>
+               `;
+           });
+           $('#rightCarouselImg').html(html);
+           $('#rightCarouselImg div:first-child').addClass("active");
+
+       },
+       error:function (data,msg) {
+           console.log(msg);
+       }
+   });
+});
+$('#rightCarouselImg').on('click','a',getDatahref);
 
 //customer scrollbar import
 (function($){
