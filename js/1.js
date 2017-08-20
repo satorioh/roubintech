@@ -145,7 +145,7 @@ function loadListItem(wgroup) {
             // console.log(data);
             var html='';
             $.each(data,function (i,group) {
-                html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+                html+=`<a class="list-group-item" href="#" data-toggle="popover" data-content= "test" data-placement="right" data-trigger="manual" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
                 if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
                     html+=`<i class="${group.icon}"></i>
                         ${group.wname}
@@ -161,6 +161,7 @@ function loadListItem(wgroup) {
 
             $('#'+wgroup).html(html);
             addTargetIcon(wgroup);
+            $('[data-toggle="popover"]').popover();
         },
         error:function (data,msg) {
             console.log(msg);
@@ -172,8 +173,8 @@ $(function () {
    $.ajax({
        url:'backend/slide_data_img.php',
        success:function (data,msg) {
-           console.log(msg);
-           console.log(data);
+           //console.log(msg);
+           //console.log(data);
            var html='';
            $.each(data,function (i,carouselImg) {
                html+=`
