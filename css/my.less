@@ -86,8 +86,10 @@ body {
     //&:hover::-webkit-scrollbar-thumb{
     //  visibility: visible;
     //}
+
   }
   a.list-group-item {
+    position: relative;
     background: inherit;
     letter-spacing: 5px;
     //&:focus {
@@ -98,6 +100,15 @@ body {
       vertical-align: middle;
       overflow: hidden;
       margin-right: .8em;
+    }
+    div.rightClickMenu {
+      position: absolute;
+      display: none;
+      width:100px;
+      height:30px;
+      background: #fff;
+      color:#000;
+      z-index: 1000;
     }
   }
   a {

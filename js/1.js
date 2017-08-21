@@ -145,18 +145,21 @@ function loadListItem(wgroup) {
             // console.log(data);
             var html='';
             $.each(data,function (i,group) {
-                html+=`<a class="list-group-item" href="#" data-toggle="popover" data-content= "test" data-placement="right" data-trigger="manual" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+                html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
                 if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
                     html+=`<i class="${group.icon}"></i>
                         ${group.wname}
+                        <div class="rightClickMenu">打开</div>
                     </a>`;
                 }else{
                     html+=`<svg class="icon" aria-hidden="true">
                             <use xlink:href="${group.icon}"></use>
                         </svg>
                         ${group.wname}
+                        <div class="rightClickMenu">打开</div>
                         </a>`;
                 }
+                ``;
             });
 
             $('#'+wgroup).html(html);
@@ -198,6 +201,21 @@ $(function () {
    });
 });
 $('#rightCarouselImg').on('click','a',getDatahref);
+
+$(window).on('contextmenu',function (e) {
+    console.log($(e.target).children('.rightClickMenu'));
+    console.log(e.offsetX);
+    console.log(e.offsetY);
+    console.log(e.clientX);
+    console.log(e.clientY);
+    var left = e.offsetX + "px";
+    var top = e.offsetY + "px";
+    $(e.target).children('.rightClickMenu').css({"display":"block","left":left,"top":top});
+    return false;
+});
+$boxLeft.on('mouseleave','.list-group-item',function (e) {
+    $('.rightClickMenu').css("display","none");
+});
 
 //customer scrollbar import
 (function($){
