@@ -18,7 +18,10 @@ var itemTitle = {
         }else {
             $span.removeClass("glyphicon-menu-down").addClass("glyphicon-menu-up");
             $(this).children('span.glyphicon-menu-up').parent().css("color","springgreen");
-            loadListItem(wgroup);
+            if($(this).next().html()==''){//仅第一次异步加载list-group-item
+                loadListItem(wgroup);
+            }
+
             //addTargetIcon();
         }
     },
@@ -75,6 +78,7 @@ function addTargetIcon(wgroup) {
 //判断是在当前页，或新便签页打开链接
 function getDatahref(e) {
     e.preventDefault();
+    e.stopPropagation();//阻止冒泡，防止右键菜单触发list-group-item的链接
     if ($(this).attr("target")=="_blank"){
         window.open($(this).attr("data-href"));
     }else {
@@ -141,7 +145,7 @@ function loadListItem(wgroup) {
         url:'backend/list_group_item.php',
         data:{wgroup:wgroup},
         success:function (data,msg) {
-            // console.log(msg);
+             console.log(msg);
             // console.log(data);
             var html='';
             $.each(data,function (i,group) {
@@ -149,14 +153,14 @@ function loadListItem(wgroup) {
                 if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
                     html+=`<i class="${group.icon}"></i>
                         ${group.wname}
-                        <div class="rightClickMenu">打开</div>
+                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
                     </a>`;
                 }else{
                     html+=`<svg class="icon" aria-hidden="true">
                             <use xlink:href="${group.icon}"></use>
                         </svg>
                         ${group.wname}
-                        <div class="rightClickMenu">打开</div>
+                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
                         </a>`;
                 }
                 ``;
@@ -171,7 +175,7 @@ function loadListItem(wgroup) {
         }
     });
 }
-//右侧幻灯图异步生成
+//右侧幻灯图，异步生成
 $(function () {
    $.ajax({
        url:'backend/slide_data_img.php',
@@ -202,20 +206,24 @@ $(function () {
 });
 $('#rightCarouselImg').on('click','a',getDatahref);
 
+//自定义右键菜单，根据鼠标点击元素的offset值摆放位置
 $(window).on('contextmenu',function (e) {
-    console.log($(e.target).children('.rightClickMenu'));
-    console.log(e.offsetX);
-    console.log(e.offsetY);
-    console.log(e.clientX);
-    console.log(e.clientY);
+    // console.log($(e.target).children('.rightClickMenu'));
+    // console.log(e.offsetX);
+    // console.log(e.offsetY);
+    // console.log(e.clientX);
+    // console.log(e.clientY);
     var left = e.offsetX + "px";
     var top = e.offsetY + "px";
     $(e.target).children('.rightClickMenu').css({"display":"block","left":left,"top":top});
-    return false;
+    return false;//阻止浏览器默认菜单
 });
+//鼠标离开，则右键菜单自动消失
 $boxLeft.on('mouseleave','.list-group-item',function (e) {
     $('.rightClickMenu').css("display","none");
 });
+//点击右键菜单，在新标签页打开链接
+$boxLeft.on('click','.rightClickMenu',getDatahref);
 
 //customer scrollbar import
 (function($){
