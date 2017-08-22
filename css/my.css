@@ -7421,6 +7421,15 @@ body {
   overflow: hidden;
   overflow-x: hidden;
 }
+#_popBox #_popBox-left #inputSearch {
+  border-radius: 15px;
+  height: 25px;
+  background: inherit;
+  border: 1px solid #999;
+  color: #fff;
+  outline: none;
+  margin-bottom: 5px;
+}
 #_popBox a.list-group-item {
   position: relative;
   background: inherit;

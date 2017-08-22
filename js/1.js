@@ -142,7 +142,7 @@ $('.common_site > a').on("click", getDatahref);
 //对异步获取的数据进行拼接
 function htmlAppend(data,wgroup,html,i,group) {
     $.each(data,function (i,group) {
-        html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+        html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}">`;
         if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
             html+=`<i class="${group.icon}"></i>
                         ${group.wname}
@@ -185,7 +185,7 @@ function loadListItem(wgroup) {
             //             </a>`;
             //     }
             // });
-            html=htmlAppend(data,wgroup,html);
+            html = htmlAppend(data,wgroup,html);
             $('#'+wgroup).html(html);
             addTargetIcon(wgroup);
             $('[data-toggle="popover"]').popover();
@@ -229,10 +229,6 @@ $('#rightCarouselImg').on('click','a',getDatahref);
 //自定义右键菜单，根据鼠标点击元素的offset值摆放位置
 $(window).on('contextmenu',function (e) {
     // console.log($(e.target).children('.rightClickMenu'));
-    // console.log(e.offsetX);
-    // console.log(e.offsetY);
-    // console.log(e.clientX);
-    // console.log(e.clientY);
     var left = e.offsetX + "px";
     var top = e.offsetY + "px";
     $(e.target).children('.rightClickMenu').css({"display":"block","left":left,"top":top});
@@ -249,24 +245,41 @@ $boxLeft.on('click','.rightClickMenu',getDatahref);
 $('#inputSearch').on('keyup',function (e) {
     setTimeout(function () {
         var kw = $('#inputSearch').val();
-        console.log(kw);
+        if(!kw){
+            $('#searchList').empty();
+            return;
+        }
+        //console.log(kw);
+        $('#searchList').empty();
         $.ajax({
             url:'backend/search.php',
             data:{kw:kw},
             success:function (data,msg) {
-                console.log(data);
+                //console.log(data);
                 var html = '';
-                // $.each(data,function (i,searchResult) {
-                //     html+=`
-                //
-                //     `;
-                // })
+                $.each(data,function (i,search) {
+                    html+=`<a class="list-group-item search-item" href="#" data-href="${search.datahref}" target="${search.isjump}">`;
+                    if(search.wgroup=="_movie"||search.wgroup=="_comic"||search.wgroup=="_download"||search.wgroup=="_scholar"||search.wgroup=="_design"||search.wgroup=="_data"||search.wgroup=="_funny"){
+                        html+=`<i class="${search.icon}"></i>
+                        ${search.wname}
+                        <div class="rightClickMenu" data-href="${search.datahref}" target="_blank">新标签页打开</div>
+                    </a>`;
+                    }else{
+                        html+=`<svg class="icon" aria-hidden="true">
+                            <use xlink:href="${search.icon}"></use>
+                        </svg>
+                        ${search.wname}
+                        <div class="rightClickMenu" data-href="${search.datahref}" target="_blank">新标签页打开</div>
+                        </a>`;
+                    }
+                });
+                $('#searchList').append($(html));
             },
             error:function (data,msg) {
                 console.log(msg);
             }
         });
-    },500);
+    },1000);
 
 });
 
