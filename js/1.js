@@ -139,6 +139,27 @@ $boxLeft.on("click","a:not(.itemTitle)", getDatahref);
 $carouselImg.on("click", getDatahref);
 $('.common_site > a').on("click", getDatahref);
 
+//对异步获取的数据进行拼接
+function htmlAppend(data,wgroup,html,i,group) {
+    $.each(data,function (i,group) {
+        html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+        if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
+            html+=`<i class="${group.icon}"></i>
+                        ${group.wname}
+                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
+                    </a>`;
+        }else{
+            html+=`<svg class="icon" aria-hidden="true">
+                            <use xlink:href="${group.icon}"></use>
+                        </svg>
+                        ${group.wname}
+                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
+                        </a>`;
+        }
+    });
+    return html;
+}
+
 //点击下拉按钮，异步加载list-item
 function loadListItem(wgroup) {
     $.ajax({
@@ -148,24 +169,23 @@ function loadListItem(wgroup) {
              console.log(msg);
             // console.log(data);
             var html='';
-            $.each(data,function (i,group) {
-                html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
-                if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
-                    html+=`<i class="${group.icon}"></i>
-                        ${group.wname}
-                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
-                    </a>`;
-                }else{
-                    html+=`<svg class="icon" aria-hidden="true">
-                            <use xlink:href="${group.icon}"></use>
-                        </svg>
-                        ${group.wname}
-                        <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
-                        </a>`;
-                }
-                ``;
-            });
-
+            // $.each(data,function (i,group) {
+            //     html+=`<a class="list-group-item" href="#" data-href="${group.datahref}" target="${group.isjump}" ${group.dataimg}>`;
+            //     if(wgroup=="_movie"||wgroup=="_comic"||wgroup=="_download"||wgroup=="_scholar"||wgroup=="_design"||wgroup=="_data"||wgroup=="_funny"){
+            //         html+=`<i class="${group.icon}"></i>
+            //             ${group.wname}
+            //             <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
+            //         </a>`;
+            //     }else{
+            //         html+=`<svg class="icon" aria-hidden="true">
+            //                 <use xlink:href="${group.icon}"></use>
+            //             </svg>
+            //             ${group.wname}
+            //             <div class="rightClickMenu" data-href="${group.datahref}" target="_blank">新标签页打开</div>
+            //             </a>`;
+            //     }
+            // });
+            html=htmlAppend(data,wgroup,html);
             $('#'+wgroup).html(html);
             addTargetIcon(wgroup);
             $('[data-toggle="popover"]').popover();
@@ -224,6 +244,31 @@ $boxLeft.on('mouseleave','.list-group-item',function (e) {
 });
 //点击右键菜单，在新标签页打开链接
 $boxLeft.on('click','.rightClickMenu',getDatahref);
+
+//搜索栏
+$('#inputSearch').on('keyup',function (e) {
+    setTimeout(function () {
+        var kw = $('#inputSearch').val();
+        console.log(kw);
+        $.ajax({
+            url:'backend/search.php',
+            data:{kw:kw},
+            success:function (data,msg) {
+                console.log(data);
+                var html = '';
+                // $.each(data,function (i,searchResult) {
+                //     html+=`
+                //
+                //     `;
+                // })
+            },
+            error:function (data,msg) {
+                console.log(msg);
+            }
+        });
+    },500);
+
+});
 
 //customer scrollbar import
 (function($){
