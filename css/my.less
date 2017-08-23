@@ -61,6 +61,7 @@ body {
   a.itemTitle {
     display: inline-block;
     width: 100%;
+    min-width: 183px;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 1.1em;
@@ -86,6 +87,10 @@ body {
     //&:hover::-webkit-scrollbar-thumb{
     //  visibility: visible;
     //}
+    .input-group {
+      max-width: 100%;
+      margin-right: 30px;
+    }
     #inputSearch {
       border-radius: 15px;
       height: 25px;
@@ -93,14 +98,15 @@ body {
       border:1px solid #999;
       color:#fff;
       outline: none;
-      margin-bottom: 5px;
-
+      margin: 5px 0 5px 5px;
     }
   }
   a.list-group-item {
     position: relative;
     background: inherit;
     letter-spacing: 5px;
+    //width: 100%;
+    min-width: 220px;
     //&:focus {
     //  background: inherit;/*cover bootstrap style*/
     //}

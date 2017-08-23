@@ -7408,6 +7408,7 @@ body {
 #_popBox a.itemTitle {
   display: inline-block;
   width: 100%;
+  min-width: 183px;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 1.1em;
@@ -7421,6 +7422,10 @@ body {
   overflow: hidden;
   overflow-x: hidden;
 }
+#_popBox #_popBox-left .input-group {
+  max-width: 100%;
+  margin-right: 30px;
+}
 #_popBox #_popBox-left #inputSearch {
   border-radius: 15px;
   height: 25px;
@@ -7428,12 +7433,13 @@ body {
   border: 1px solid #999;
   color: #fff;
   outline: none;
-  margin-bottom: 5px;
+  margin: 5px 0 5px 5px;
 }
 #_popBox a.list-group-item {
   position: relative;
   background: inherit;
   letter-spacing: 5px;
+  min-width: 220px;
 }
 #_popBox a.list-group-item i.sprite {
   display: inline-block;
