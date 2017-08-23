@@ -11,7 +11,8 @@ create table website(
     wname varchar(32),
     isjump varchar(32),
     dataimg varchar(32),
-    img varchar(32)
+    img varchar(32),
+    searchstring varchar(32)
 );
 
 insert into website values
