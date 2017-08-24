@@ -3,7 +3,7 @@ header("Content-Type:application/json;charset:utf-8");
 
 $wgroup = $_REQUEST['wgroup'];
 include('config.php');
-$link = mysqli_connect($db_url,$db_user,$db_pwd,$db_name);
+$link = mysqli_connect($db_url,$db_user,$db_pwd,$db_name,$db_port);
 
 $sql = "set names utf8";
 mysqli_query($link,$sql);
