@@ -9,7 +9,7 @@
   9. 翻墙需给提示
 √ 10. scrollbar兼容性
 √  11. 免责声明
-  12. all files min 压缩
+√  12. all files min 压缩
   13. cookie and session
   14. 自定义拖拽
   15. 登陆注册
@@ -17,3 +17,4 @@
 √ 17. AJAX异步请求网址数据
   18. 静态资源CDN
 √ 19. 右键菜单
+  20. DOM查询抖动
