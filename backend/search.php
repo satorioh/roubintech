@@ -10,5 +10,9 @@ mysqli_query($link,$sql);
 
 $sql = "select * from website where searchstring like '%$kw%'";
 $result = mysqli_query($link,$sql);
-$list = mysqli_fetch_all($result,MYSQLI_ASSOC);
+//$list = mysqli_fetch_all($result,MYSQLI_ASSOC);
+$list = array();
+while ($row = $result->fetch_assoc()) {
+    $list[] = $row;
+};
 echo json_encode($list);
